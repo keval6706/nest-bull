@@ -2,7 +2,10 @@ import { Controller, Post } from '@nestjs/common';
 import { InjectQueue } from '@nestjs/bull';
 import { Queue } from 'bull';
 
-@Controller('audio')
+@Controller({
+  path: 'audio',
+  version: '1',
+})
 export class AudioController {
   constructor(@InjectQueue('audio') private readonly audioQueue: Queue) {}
 
