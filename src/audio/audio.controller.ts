@@ -3,7 +3,6 @@ import { InjectQueue } from '@nestjs/bull';
 import { Queue } from 'bull';
 
 @Controller({
-  path: 'audio',
   version: '1',
 })
 export class AudioController {
